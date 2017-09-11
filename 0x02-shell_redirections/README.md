@@ -1,0 +1,1 @@
+0- Use Echo command for printing the said command exactly
