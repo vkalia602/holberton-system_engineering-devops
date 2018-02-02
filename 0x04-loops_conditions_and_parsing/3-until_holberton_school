@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script prints "Holberton School" on stdout 10 times using until loop
+
+index=0
+until [ $index -lt 10 ]
+do
+	echo "Holberton School"
+	((index++))
+done
