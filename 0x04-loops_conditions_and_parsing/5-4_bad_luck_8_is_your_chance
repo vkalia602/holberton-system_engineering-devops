@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 # This script loops to print "Holberton School" and different  phrases on 4th, 8th iteration
-index=0
-while [ $index -lt 10 ]
+index=1
+while [ $index -le 10 ]
 do
-if [ $index -eq 4 ]
-then echo "bad luck"
-elif [ $index -eq 8 ]
-then echo "good luck"
-else
-echo "Holberton School"
-fi
-((index++))
+    if [ $index -eq 4 ]
+    then echo "bad luck"
+
+    elif [ $index -eq 8 ]
+    then echo "good luck"
+
+    else
+	echo "Holberton School"
+    fi
+    ((index++))
 done
