@@ -2,7 +2,7 @@
 # This script prints "Holberton School" on stdout 10 times using until loop
 
 index=0
-until [ $index -lt 10 ]
+until [ $index -eq 10 ]
 do
 	echo "Holberton School"
 	((index++))
