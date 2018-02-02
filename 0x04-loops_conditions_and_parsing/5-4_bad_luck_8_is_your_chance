@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # This script loops to print "Holberton School" and different  phrases on 4th, 8th iteration
-index=1
+index=0
 while [ $index -lt 10 ]
 do
 if [ $index -eq 4 ]
