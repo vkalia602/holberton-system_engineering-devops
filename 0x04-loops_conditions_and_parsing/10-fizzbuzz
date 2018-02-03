@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This script displays numbers from 1 to 100 and displays FizzBuzz for multiples for 3 & 4,
+# Fizz at multiple of 3 and Buzz at multiple of 5
+
+for index in {1..100}
+do
+	if [ $((index % 15)) -eq 0 ]
+	then echo "FizzBuzz"
+	elif [ $((index % 3)) -eq 0 ]
+	then echo "Fizz"
+	elif [ $((index % 5)) -eq 0 ]
+	then echo "Buzz"
+	else
+	echo $index
+fi
+done 
