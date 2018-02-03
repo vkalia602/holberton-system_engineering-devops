@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script dispalys the contents of the current directory in list format without the
+#  preceding number
+for things in *
+do
+    echo "$things" | cut -d "-" -f2
+
+done
