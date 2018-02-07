@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This script traps sigint and stops the program from being terminated
+
+i=0
+while [ $i -lt 10 ]
+do
+	trap 'echo "I am Invincible"' SIGTERM
+	echo "To infinity and beyond"
+	sleep 2
+done
