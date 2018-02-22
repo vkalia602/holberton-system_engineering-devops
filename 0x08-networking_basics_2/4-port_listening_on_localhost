@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-sudo nc -l 98
+nc -l 98
