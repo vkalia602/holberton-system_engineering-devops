@@ -2,5 +2,4 @@
 # script changes ports in nginx so it could listen on port 80
 sed -i 's/8080 default_server/80 default_server/' /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-enabled/*~
-service nginx restart
-curl 0:80
+sudo service nginx restart
