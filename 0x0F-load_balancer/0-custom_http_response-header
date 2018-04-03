@@ -18,4 +18,4 @@ sudo sed -i "s/$x/$y/" /etc/nginx/sites-enabled/default
 # adding HTTP header
 sudo sed -i "11i\\\t add_header X-Served-By $HOSTNAME;\n" /etc/nginx/nginx.conf
 # restarting nginx
-sudo service nginx start
+sudo service nginx restart
