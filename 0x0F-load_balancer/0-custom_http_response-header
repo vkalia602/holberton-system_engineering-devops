@@ -16,6 +16,6 @@ y="error_page 404"
 #redirecting to 404.html for page not found
 sudo sed -i "s/$x/$y/" /etc/nginx/sites-enabled/default
 # adding HTTP header
-sudo sed -i "11i\\tadd_header X-Served-By $HOSTNAME;\n" /etc/nginx/nginx.conf
+sudo sed -i "11i\\\t add_header X-Served-By $HOSTNAME;\n" /etc/nginx/nginx.conf
 # restarting nginx
 sudo service nginx start
