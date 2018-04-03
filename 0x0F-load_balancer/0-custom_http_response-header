@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Script for server set up
 sudo apt-get -y update
 # installing nginx server
 sudo apt-get -y install nginx
