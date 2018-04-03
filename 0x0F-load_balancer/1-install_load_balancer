@@ -15,6 +15,7 @@ echo " listen 267-lb-01
                mode http
                stats enable
                balance roundrobin
-               server 267-web-01 34.228.167.248 check port 80" | sudo tee -a /etc/haproxy/haproxy.cfg
+               server 267-web-01 34.228.167.248 check port 80
+               server 267-web-02 54.174.216.235 check port 80" | sudo tee -a /etc/haproxy/haproxy.cfg
 
 sudo service haproxy restart
