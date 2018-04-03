@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#script to install and configure HAproxy(load balancer)
+sudo apt-get -y update
+# installing latest version of HAproxy
+# https://haproxy.debian.net/#?distribution=Ubuntu&release=trusty&version=1.8
+sudo apt-get -y install HAproxy
+sudo apt-get install -y software-properties-common
+sudo add-apt-repository -y ppa:vbernat/haproxy-1.8
+sudo apt-get -y update
+sudo apt-get install -y haproxy=1.8.\*
+
+# configuring HAproxy
+sudo sed -i "10i\ \\nENABLED=1" /etc/default/haproxy
+echo " listen 267-lb-01
+               bind 0:80
+               mode http
+               stats enable
+               balance roundrobin
+               server 267-web-01 34.228.167.248 check port 80" | sudo tee -a /etc/haproxy/haproxy.cfg
+
+sudo service haproxy restart
