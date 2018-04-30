@@ -22,8 +22,8 @@ if __name__ == "__main__":
             completed_tasks.append(todo_dict['title'])
             NUMBER_OF_DONE_TASKS += 1
         TOTAL_NUMBER_OF_TASKS += 1
-    print('Employee {} is done with tasks ({}/{}):'
+    print('Employee {} is done with tasks({}/{}):'
           .format(employee['name'], NUMBER_OF_DONE_TASKS,
                   TOTAL_NUMBER_OF_TASKS))
-    for items in completed_tasks:
-        print('\t', format(items))
+    for TASK_TITLE in completed_tasks:
+        print('\t ', format(TASK_TITLE))
