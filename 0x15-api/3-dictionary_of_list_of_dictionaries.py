@@ -2,17 +2,15 @@
 '''
 Script that takes employee ID and returns information about that employee
 '''
-
+import json
 import requests
 from sys import argv
-import json
 
 if __name__ == "__main__":
     url = 'https://jsonplaceholder.typicode.com/'
     total_tasks = []
     all_employees = {}
     list_userids = []
-    count = 0
     employees = requests.get('{}users/'.format(url))
     employees = employees.json()
     for items in employees:
