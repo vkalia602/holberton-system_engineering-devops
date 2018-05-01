@@ -16,9 +16,7 @@ if __name__ == "__main__":
     tasks = requests.get('https://jsonplaceholder.typicode.com/users/{}/todos'
                          .format(argv[1]))
     tasks = tasks.json()
-    print(tasks[1])
     employee = employee.json()
-    print(employee)
 
     file_name = "{}.csv".format(tasks[0].get('userId'))
     with open(file_name, 'w') as f:
