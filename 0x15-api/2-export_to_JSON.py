@@ -20,6 +20,6 @@ if __name__ == "__main__":
     for items in tasks:
         total_tasks.append(items)
     all_employees[str(user)] = total_tasks
-    file_name = "{}.json".format('todo_all_employees')
+    file_name = "{}.json".format(user)
     with open(file_name, 'w') as f:
         json.dump(all_employees, f)
