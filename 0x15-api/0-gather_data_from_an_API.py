@@ -18,12 +18,12 @@ if __name__ == "__main__":
     tasks = tasks.json()
     employee = employee.json()
     for todo_dict in tasks:
-        if todo_dict['completed'] is True:
-            completed_tasks.append(todo_dict['title'])
+        if todo_dict.get('completed') is True:
+            completed_tasks.append(todo_dict.get('title'))
             NUMBER_OF_DONE_TASKS += 1
-        TOTAL_NUMBER_OF_TASKS += 1
+
     print('Employee {} is done with tasks({}/{}):'
-          .format(employee['name'], NUMBER_OF_DONE_TASKS,
-                  TOTAL_NUMBER_OF_TASKS))
+          .format(employee.get('name'), NUMBER_OF_DONE_TASKS,
+                  len(tasks)))
     for TASK_TITLE in completed_tasks:
-        print('\t ', format(TASK_TITLE))
+        print('\t {}'. format(TASK_TITLE))
