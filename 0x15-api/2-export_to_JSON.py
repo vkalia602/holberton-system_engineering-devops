@@ -15,7 +15,7 @@ if __name__ == "__main__":
     employees = requests.get('{}users/{}'.format(url, user))
     employees = employees.json()
     tasks = requests.get('{}users/{}/todos'
-                             .format(url, user))
+                         .format(url, user))
     tasks = tasks.json()
     for items in tasks:
         total_tasks.append(items)
