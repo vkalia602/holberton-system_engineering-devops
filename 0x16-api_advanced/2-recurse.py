@@ -12,7 +12,6 @@ def recurse(subreddit, hot_list=[], after=""):
     Method that recursively makes API calls using 'after' attribute
     '''
     url = 'http://api.reddit.com/r/{}/hot?after={}'.format(subreddit, after)
-    print(url)
     headers = {'User-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1)'}
     response = requests.get(url, headers=headers)
     if response.status_code != 200:
