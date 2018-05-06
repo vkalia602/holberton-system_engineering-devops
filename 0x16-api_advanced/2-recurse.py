@@ -11,14 +11,18 @@ def recurse(subreddit, hot_list=[], after=""):
     '''
     Method that recursively makes API calls using 'after' attribute
     '''
-    url = 'http://api.reddit.com/r/{}/hot?after={}'.format(subreddit, after)
+    url = 'https://api.reddit.com/r/{}/hot?after={}'.format(subreddit, after)
     headers = {'User-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1)'}
-    response = requests.get(url, headers=headers)
+    response = requests.get(url, headers=headers, allow_redirects=False)
     if response.status_code != 200:
-        return (hot_list)
+        return None
+
     append_list(response.json(), hot_list)
     if after is None:
-        return (hot_list)
+        if len(hot_list) == 0:
+            return None
+        else:
+            return (hot_list)
     return recurse(subreddit, hot_list, after=response.json()['data']['after'])
 
 
